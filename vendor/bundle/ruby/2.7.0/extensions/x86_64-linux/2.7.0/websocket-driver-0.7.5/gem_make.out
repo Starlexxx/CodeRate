@@ -1,0 +1,15 @@
+current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20210708-21721-1jfp3zg.rb extconf.rb
+creating Makefile
+
+current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20210708-21721-kq0zeu
