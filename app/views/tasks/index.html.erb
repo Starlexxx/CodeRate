@@ -1,1 +1,17 @@
-<h1>Welcome</h1>
+<h1>Список задач</h1>
+<%= link_to 'Добавить задание', new_task_path %>
+<table>
+  <tr>
+    <th>Название</th>
+  </tr>
+
+  <% @tasks.each do |task| %>
+    <tr>
+      <td><%= link_to task.title, task_path(task) %></td>
+      <td><%= link_to 'Удалить', task_path(task),
+              method: :delete,
+              data: { confirm: 'Вы уверены?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
