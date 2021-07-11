@@ -4,6 +4,10 @@
 </p>
 
 <p>
+  <%= image_tag @task.picture_url unless @task.picture_url.nil? %>
+</p>
+
+<p>
   <strong>Задание</strong>
   <%= @task.body %>
 </p>

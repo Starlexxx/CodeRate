@@ -11,7 +11,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(params.require(:task).permit(:title, :body))
+    @task = Task.new(params.require(:task).permit(:title, :picture, :body))
     @task.save
     redirect_to @task
   end
