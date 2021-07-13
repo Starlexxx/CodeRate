@@ -1,14 +1,14 @@
-<p>
-  <strong>Название</strong>
-  <%= @task.title %>
-</p>
+<article class="task">
+  <section class="task-head">
+    <h1><%= @task.title %></h1>
+    <small>
+      <%= link_to 'Изменить', edit_task_path(@task) %>
+      |
+      <%= link_to 'Удалить', task_path(@task), method: :delete, data: { confirm: 'Вы уверены?' } %>
+    </small>
+  </section>
 
-<p>
-  <%= image_tag @task.picture_url unless @task.picture_url.nil? %>
-</p>
-
-<p>
-  <strong>Задание</strong>
-  <%= @task.body %>
-</p>
-<%= link_to 'Назад', tasks_path %>
+  <section class="task-body">
+    <%= @task.body %>
+  </section>
+</article>

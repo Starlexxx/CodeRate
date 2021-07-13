@@ -1,18 +1,3 @@
-<h1>Редактирование задачи</h1>
-<%= form_for :task, url: tasks_path do |f| %>
-  <p>
-    <%= f.label :Название %><br>
-    <%= f.text_field :title %>
-  </p>
-   <p>
-    <%= f.file_field :picture %><br>
-  </p>
-  <p>
-    <%= f.label :Задание %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
-<%= link_to 'Назад', tasks_path %>
+<h1>Редактирование задания</h1>
+
+<%= render 'form' %>
