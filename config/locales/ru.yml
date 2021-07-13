@@ -1,0 +1,14 @@
+ru:
+  common:
+    errors: 'При заполнении формы возникли ошибки'
+    back: 'Назад'
+  tasks:
+    index:
+      title: 'Задание'
+    new:
+      title: 'Новое задание'
+    edit:
+      title: 'Редактирование задания'
+    form:
+      submit:
+        '%{action} задание'

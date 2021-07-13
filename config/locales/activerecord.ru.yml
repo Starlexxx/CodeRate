@@ -1,0 +1,11 @@
+ru:
+  activerecord:
+    models:
+      task: 'Задание'
+    attributes:
+      task:
+        title: 'Название'
+        body: 'Содержание'
+    errors:
+      messages:
+        blank: 'не может быть пустым'
