@@ -1,17 +1,18 @@
 <h1>Список задач</h1>
-<%= link_to 'Добавить задание', new_task_path, class: 'btn btn-outline-primary' %>
-<table>
-  <tr>
-    <th>Название</th>
-  </tr>
-
-  <% @tasks.each do |task| %>
+  <%= link_to 'Добавить задание', new_task_path, class: 'btn btn-outline-primary' %>
+  <table>
     <tr>
-      <td><%= link_to task.title, task_path(task), class: 'btn btn-light btn-sm' %></td>
-      <td><%= link_to 'Удалить', task_path(task), class: 'btn btn-danger btn-sm',
-              method: :delete,
-              data: { confirm: 'Вы уверены?' } %></td>
+      <th>Название</th>
     </tr>
-  <% end %>
-</table>
+
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= link_to task.title, task_path(task), class: 'btn btn-light btn-sm' %></td>
+        <td><%= link_to 'Редактировать', task_path(task), class: 'btn btn-light btn-sm' %></td>
+        <td><%= link_to 'Удалить', task_path(task), class: 'btn btn-danger btn-sm',
+                method: :delete,
+                data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+  </table>
 
