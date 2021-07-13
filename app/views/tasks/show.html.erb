@@ -8,7 +8,9 @@
     </small>
   </section>
 
+  
   <section class="task-body">
+    <%= image_tag @task.picture.url(:medium), class: 'img-thumbnail thumb' if @task.picture? %>
     <%= @task.body %>
   </section>
 </article>
