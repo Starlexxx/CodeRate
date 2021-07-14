@@ -4,7 +4,7 @@ ru:
     back: 'Назад'
   tasks:
     index:
-      title: 'Задание'
+      title: 'Задания'
     new:
       title: 'Новое задание'
     edit:

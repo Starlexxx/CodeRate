@@ -4,6 +4,7 @@
 // that code so it'll be compiled.
 //= require jquery3
 //= require popper
+//= require trix
 //= require bootstrap-sprockets
 
 import Rails from "@rails/ujs"
@@ -14,3 +15,6 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+require("trix")
+require("@rails/actiontext")

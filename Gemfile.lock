@@ -95,6 +95,8 @@ GEM
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.3)
+    formtastic (4.0.0)
+      actionpack (>= 5.2.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.8.10)
@@ -195,6 +197,8 @@ GEM
     ssrf_filter (1.0.7)
     thor (1.1.0)
     tilt (2.0.10)
+    trix (0.10.1)
+      rails
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -230,6 +234,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   carrierwave (~> 2.0)
+  formtastic (~> 4.0)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mini_magick
@@ -240,6 +245,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   sqlite3 (~> 1.4)
+  trix
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
