@@ -25,6 +25,8 @@ gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 gem "trix"
 gem 'formtastic', '~> 4.0'
+gem 'will_paginate', '~> 3.1.0'
+gem 'ancestry'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

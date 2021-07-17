@@ -1,0 +1,8 @@
+$('#tasks').append("<%= j render(partial: 'tasks/delimeter') %>");
+$('#tasks').append("<%= j render(@tasks) %>");
+
+<% if @tasks.next_page %>
+    $('.pagination').replaceWith("<%= j  will_paginate(@tasks, renderer: 'BootstrapPaginationHelper::LinkRenderer') %>");
+<% else %>
+    $('.pagination').remove();
+<% end %>

@@ -3,7 +3,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @tasks = Task.all
+    @tasks = Task.paginate(page: params[:page], per_page: 5)
   end
 
   def show
@@ -18,7 +18,8 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to @task, success: 'Задание успешно создано'
     else
-      render :new, danger: 'Задание не создано'
+      flash.now[:danger] = 'Задание не создано'
+      render :new
     end
   end
 
@@ -29,7 +30,8 @@ class TasksController < ApplicationController
     if @task.update(task_params)
       redirect_to @task, success: 'Задание успешно обновлено'
     else
-      render :edit, danger: 'Задание не обновлено'
+      flash.now[:danger] = 'Задание не обновлено'
+      render :edit
     end
   end
 
@@ -45,7 +47,7 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:title, :body)
-    params.require(:task).permit(:title, :picture, :body)
+    params.require(:task).permit(:title, :body, :category_id)
+    params.require(:task).permit(:title, :picture, :body, :category_id)
   end
 end

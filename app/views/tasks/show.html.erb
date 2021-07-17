@@ -2,6 +2,10 @@
   <section class="task-head">
     <h1><%= @task.title %></h1>
     <small>
+      <% if @task.category.present? %>
+        <%= link_to @task.category.name , @task.category %>
+        |
+      <% end %>
       <%= link_to 'Изменить', edit_task_path(@task) %>
       |
       <%= link_to 'Удалить', task_path(@task), method: :delete, data: { confirm: 'Вы уверены?' } %>
