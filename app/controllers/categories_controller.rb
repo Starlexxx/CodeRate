@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!, except: :show
   before_action :set_category, only: [:show, :edit, :update, :destroy ]
 
   def index
@@ -19,18 +20,21 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to categories_path, success: 'Категория успешно создана'
     else
+      @categories = Category.all.order(:name)
       flash[:danger] = 'Категория не создана'
       render :new
     end
   end
 
   def edit
+    @categories = Category.where("id != #{@category.id}").order(:name)
   end
 
   def update
     if @category.update_attributes(category_params)
       redirect_to categories_path, success: 'Категория успешно обновлена'
     else
+      @categories = Category.where("id != #{@category.id}").order(:name)
       flash[:danger] = 'Категория не обновлена'
       render :edit
     end
