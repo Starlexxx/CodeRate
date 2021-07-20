@@ -5,20 +5,22 @@ ru:
   tasks:
     index:
       title: 'Задания'
-    new:
-      title: 'Новое задание'
-    edit:
-      title: 'Редактирование задания'
-    form:
-      submit:
-        '%{action} задание'
-  categories:
-    index:
-      title: 'Категории'
-    new:
-      title: 'Новая категория'
-    edit:
-      title: 'Редактирование категории'
-    form:
-      submit:
-        '%{action} категорию'
+  admin:
+    tasks:
+      new:
+        title: 'Новое задание'
+      edit:
+        title: 'Редактирование задания'
+      form:
+        submit:
+          '%{action} задание'
+    categories:
+      index:
+        title: 'Категории'
+      new:
+        title: 'Новая категория'
+      edit:
+        title: 'Редактирование категории'
+      form:
+        submit:
+          '%{action} категорию'

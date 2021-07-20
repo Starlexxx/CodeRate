@@ -8,7 +8,7 @@
     </ul>
   </div>
 <% end %>
-<%= form_for @task, html: { multipart: true } do |f| %>
+<%= form_for [:admin, @task], html: { multipart: true } do |f| %>
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>

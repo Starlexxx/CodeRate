@@ -5,11 +5,11 @@
       <% if task.category.present? %>
         <%= link_to task.category.name , task.category %>
       <% end %>
-      <% if user_signed_in? %>
+      <% if user_signed_in? && current_user.admin? %>
         |
-        <%= link_to 'Изменить', edit_task_path(task) %>
+        <%= link_to 'Изменить', edit_admin_task_path(task) %>
         |
-        <%= link_to 'Удалить', task_path(task), method: :delete, data: { confirm: 'Вы уверены?' } %>
+        <%= link_to 'Удалить', admin_task_path(task), method: :delete, data: { confirm: 'Вы уверены?' } %>
       <% end %>
     </small>
   </section>
