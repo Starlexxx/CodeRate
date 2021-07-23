@@ -28,6 +28,10 @@ gem 'formtastic', '~> 4.0'
 gem 'will_paginate', '~> 3.1.0'
 gem 'ancestry'
 gem 'devise'
+gem 'pry'
+gem 'dotenv-rails'
+gem 'platform-api' 
+gem 'codemirror-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

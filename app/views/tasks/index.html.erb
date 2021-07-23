@@ -1,6 +1,6 @@
-<h1><%= t('.title') %></h1>
 <% if user_signed_in? && current_user.admin? %>
   <%= link_to 'Новое задание', new_admin_task_path, class: 'btn btn-outline-primary' %>
+  <%= link_to 'Просмотр категорий', admin_categories_path, class: 'btn btn-outline-primary' %>
 <% end %>
 
-<%= render @tasks %>
+

@@ -6,6 +6,12 @@
 //= require popper
 //= require trix
 //= require bootstrap-sprockets
+//= require codemirror
+//= require codemirror/modes/xml
+//= require codemirror/modes/htmlmixed
+//= require codemirror/modes/javascript
+//= require codemirror/modes/ruby
+//= require codemirror/modes/haml
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
@@ -18,3 +24,10 @@ ActiveStorage.start()
 
 require("trix")
 require("@rails/actiontext")
+
+$("textarea").each(function() {
+  CodeMirror.fromTextArea($(this).get(0), {
+    lineNumbers: true,
+    mode: "text/x-haml"
+  });
+});
