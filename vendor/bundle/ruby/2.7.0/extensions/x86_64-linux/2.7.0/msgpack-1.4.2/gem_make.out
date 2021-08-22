@@ -1,5 +1,5 @@
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/msgpack-1.4.2/ext/msgpack
-/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20210708-21721-t6u09s.rb extconf.rb
+/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210726-25119-17o5mgz.rb extconf.rb
 checking for ruby/st.h... yes
 checking for st.h... yes
 checking for rb_str_replace() in ruby.h... yes
@@ -13,10 +13,10 @@ checking for rb_hash_clear() in ruby.h... yes
 creating Makefile
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/msgpack-1.4.2/ext/msgpack
-make "DESTDIR=" clean
+make DESTDIR\= clean
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/msgpack-1.4.2/ext/msgpack
-make "DESTDIR="
+make DESTDIR\=
 compiling buffer.c
 compiling buffer_class.c
 buffer_class.c: In function ‘read_until_eof’:
@@ -78,5 +78,5 @@ compiling unpacker_ext_registry.c
 linking shared-object msgpack/msgpack.so
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/msgpack-1.4.2/ext/msgpack
-make "DESTDIR=" install
-/usr/bin/install -c -m 0755 msgpack.so ./.gem.20210708-21721-1101o3f/msgpack
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 msgpack.so ./.gem.20210726-25119-2wpjs1/msgpack

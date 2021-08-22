@@ -1,12 +1,12 @@
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20210708-21721-albs9k.rb extconf.rb
+/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210726-25119-qcf3a2.rb extconf.rb
 creating Makefile
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-make "DESTDIR=" clean
+make DESTDIR\= clean
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-make "DESTDIR="
+make DESTDIR\=
 compiling ./libsass/src/ast.cpp
 compiling ./libsass/src/ast2c.cpp
 compiling ./libsass/src/ast_fwd_decl.cpp
@@ -76,5 +76,5 @@ compiling ./libsass/src/values.cpp
 linking shared-object sassc/libsass.so
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20210708-21721-1t6betv/sassc
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20210726-25119-1ggmdit/sassc

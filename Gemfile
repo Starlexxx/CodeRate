@@ -31,7 +31,8 @@ gem 'devise'
 gem 'pry'
 gem 'dotenv-rails'
 gem 'platform-api' 
-gem 'codemirror-rails'
+gem 'ace-rails-ap'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   get 'tasks/index'
   get 'compiler/execute'
-  post 'compiler/submitcode' , to: 'compiler#submitcode'
+  post 'compiler/submit_code' , to: 'compiler#submit_code'
+  post 'tasks/test_code' , to: 'tasks#test_code'
   resources :tasks, only: [:show, :index]
   resources :categories, only: [:show]
 

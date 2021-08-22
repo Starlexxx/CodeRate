@@ -1,5 +1,5 @@
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/puma-5.3.2/ext/puma_http11
-/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20210708-21721-2o5d9u.rb extconf.rb
+/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210726-25119-top27v.rb extconf.rb
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
@@ -11,15 +11,15 @@ checking for SSL_CTX_set_ecdh_auto(NULL, 0) in openssl/ssl.h... yes
 creating Makefile
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/puma-5.3.2/ext/puma_http11
-make "DESTDIR=" clean
+make DESTDIR\= clean
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/puma-5.3.2/ext/puma_http11
-make "DESTDIR="
+make DESTDIR\=
 compiling http11_parser.c
 compiling mini_ssl.c
 compiling puma_http11.c
 linking shared-object puma/puma_http11.so
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/puma-5.3.2/ext/puma_http11
-make "DESTDIR=" install
-/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20210708-21721-1hcs9vr/puma
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20210726-25119-1vpozdi/puma

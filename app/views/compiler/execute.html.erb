@@ -1,24 +1,25 @@
-<div id="execute" class="container">
+<div class="form-group">
 
-<h4><strong>Онлайн компилятор</strong></h4>
-<hr>
- <%= form_tag("/compiler/submitcode", method: "post") do %> 
-<h4>Выбор языка</h4>
-  <%= select_tag("Compiler", options_for_select(@language_array)) %>
-  <p>
-  	<br>
-<h4>Исходный код</h4>
-<%= text_area_tag(:sc,"",size: "100x15") %>  
+  <h4><strong>Онлайн компилятор</strong></h4>
+    <hr>
+    <%= form_tag("/compiler/submit_code", method: "post") do %> 
+  <h4>Выбор языка</h4>
+    <%= select_tag("Compiler", options_for_select(@language_array)) %>
+    <p>
+      <br>
+  <h4>Исходный код</h4>
+  <%#= text_area_tag(:sc,"",size: "100x15") %>
+  <div class="field">
+    <%= text_area(:sc,"",size: "100x15") %>
+  </div>
+  <br><br>
+  <h4><strong>Ввод данных</strong></h4>
+    
+  <%= text_area_tag(:testcase,"", size: "35x6") %>
+  </p>
+  <button class="btn btn-primary" >Запустить код</button>
 
-<br><br>
-<h4><strong>Ввод данных</strong> </h4>
-  
-<%= text_area_tag(:testcase,"", size: "35x6") %>
-</p>
-<button class="btn btn-primary" >Запустить код</button>
-
-<%= @ret_view %>
-<% end %>
+  <%= @ret_view %>
+  <% end %>
 
 </div>
-

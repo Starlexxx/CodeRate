@@ -1,0 +1,9 @@
+<h5>Результат</h5>
+<br>
+<br>
+	<% if @compilation_result.to_s.strip == @result.to_s %>
+		<% p "correct" %>		
+		<p>Тесты успешно пройдены</p>
+	<% else %>
+		<p>Тесты не пройдены</p>
+	<% end %>

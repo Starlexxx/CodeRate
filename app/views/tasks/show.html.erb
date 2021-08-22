@@ -18,5 +18,28 @@
   <section class="task-body">
     <%= image_tag @task.picture.url(:medium), class: 'img-thumbnail thumb' if @task.picture? %>
     <%= @task.body %>
+    <div class="form-group">
+
+      <h4><strong>Онлайн компилятор</strong></h4>
+        <hr>
+        <%= form_tag("/tasks/test_code", method: "post") do %> 
+      <h4>Выбор языка</h4>
+        <%= select_tag("Compiler", options_for_select(@language_array)) %>
+        <p>
+          <br>
+      <h4>Исходный код</h4>
+      <div class="field">
+        <%= text_area(:sc,"",size: "100x15") %>
+      </div>
+      <br><br>
+       <%=hidden_field_tag(:testcase, @task.tests) %>
+       <%=hidden_field_tag(:results, @task.results) %>
+      <button class="btn btn-primary" >Протестировать код</button>
+
+      <%= @ret_view %>
+      <% end %>
+
+    </div>
   </section>
+
 </article>

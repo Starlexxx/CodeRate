@@ -29,14 +29,14 @@
           <ul class="navbar-nav pull-xs-right">
             <% if user_signed_in? %>
               <li class="nav-item">
-                <%= link_to "Выход", destroy_user_session_path, method: :delete, class: "nav-link" %>
+                <%= button_to "Выход", destroy_user_session_path, method: :delete, class: "btn btn-default" %>
               </li>
             <% else %>
               <li class="nav-item">
-                <%= link_to "Вход", new_user_session_path, class: "nav-link" %>
+                <%= link_to"Вход", new_user_session_path, class: "btn btn-default" %>
               </li>
               <li class="nav-item">
-                <%= link_to "Регистрация", new_user_registration_path, class: "nav-link" %>
+                <%= link_to "Регистрация", new_user_registration_path, class: "btn btn-default" %>
               </li>
             <% end %>
           </ul>

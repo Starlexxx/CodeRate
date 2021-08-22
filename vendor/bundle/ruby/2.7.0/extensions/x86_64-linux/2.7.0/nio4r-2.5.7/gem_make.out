@@ -1,5 +1,5 @@
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
-/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20210708-21721-8cob6b.rb extconf.rb
+/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210726-25119-tl3ll9.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... yes
 checking for linux/io_uring.h... no
@@ -12,10 +12,10 @@ checking for sys/resource.h... yes
 creating Makefile
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
-make "DESTDIR=" clean
+make DESTDIR\= clean
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
-make "DESTDIR="
+make DESTDIR\=
 compiling bytebuffer.c
 compiling monitor.c
 compiling nio4r_ext.c
@@ -76,5 +76,5 @@ cc1: warning: unrecognized command line option â€˜-Wno-constant-logical-operandâ
 linking shared-object nio4r_ext.so
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/nio4r-2.5.7/ext/nio4r
-make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20210708-21721-1o0iu36
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20210726-25119-15xj1te

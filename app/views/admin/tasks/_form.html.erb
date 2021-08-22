@@ -24,6 +24,16 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :tests %>
+    <%= f.text_field :tests, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :results %>
+    <%= f.text_field :results, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
     <%= f.label :category_id %>
     <%= f.collection_select :category_id, Category.order(:name), :id, :name, { include_blank: true }, class: 'form-control' %>
   </div>

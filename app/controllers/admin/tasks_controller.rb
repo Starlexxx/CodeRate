@@ -31,7 +31,7 @@ class Admin::TasksController < Admin::AdminController
     @task.destroy
     redirect_to tasks_path, success: 'Задание успешно удалено'
   end
-
+  
   private
 
   def set_task
@@ -39,7 +39,7 @@ class Admin::TasksController < Admin::AdminController
   end
 
   def task_params
-    params.require(:task).permit(:title, :body, :category_id)
-    params.require(:task).permit(:title, :picture, :body, :category_id)
+    params.require(:task).permit(:title, :body, :tests, :results, :category_id)
+    params.require(:task).permit(:title, :picture, :body, :tests, :results, :category_id)
   end
 end

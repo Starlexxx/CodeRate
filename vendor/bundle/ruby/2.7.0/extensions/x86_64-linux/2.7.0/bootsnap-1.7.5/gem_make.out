@@ -1,15 +1,15 @@
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
-/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20210708-21721-vkjtkg.rb extconf.rb
+/home/starlex/.rbenv/versions/2.7.0/bin/ruby -I /home/starlex/.rbenv/versions/2.7.0/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210726-25119-1lnllnh.rb extconf.rb
 creating Makefile
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
-make "DESTDIR=" clean
+make DESTDIR\= clean
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
-make "DESTDIR="
+make DESTDIR\=
 compiling bootsnap.c
 linking shared-object bootsnap/bootsnap.so
 
 current directory: /home/starlex/Documents/CodeRate/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
-make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20210708-21721-b8jpjg/bootsnap
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20210726-25119-vwyr56/bootsnap

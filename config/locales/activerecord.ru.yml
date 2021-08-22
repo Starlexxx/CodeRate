@@ -6,6 +6,8 @@ ru:
       task:
         title: 'Название'
         body: 'Содержание'
+        tests: 'Тесты'
+        category_id: 'Категория'
       category:
         name: 'Название'
         parent_id: 'Категория родитель'

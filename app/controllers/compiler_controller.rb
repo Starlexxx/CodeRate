@@ -5,7 +5,6 @@ require 'pry'
 require 'dotenv/load'
 require 'platform-api'
 
-
 class CompilerController < ApplicationController
   # GET REQUEST FOR COMPILERS NAME AND ID 
   def execute
@@ -39,10 +38,10 @@ class CompilerController < ApplicationController
       @language_array << [ i["name"],i["id"] ]
     end  
 
-    end
+  end
   
 
-  def submitcode
+  def submit_code
     @ret_view =13
     
     # Send the Post request
@@ -107,5 +106,4 @@ class CompilerController < ApplicationController
     end  
          
   end
-
 end
