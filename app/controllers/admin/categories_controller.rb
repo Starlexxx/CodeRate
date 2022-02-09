@@ -1,52 +1,56 @@
-class Admin::CategoriesController < Admin::AdminController
-  before_action :set_category, only: [:edit, :update, :destroy]
+# frozen_string_literal: true
 
-  def index
-    @categories = Category.all
-  end
+module Admin
+  class CategoriesController < Admin::AdminController
+    before_action :set_category, only: %i[edit update destroy]
 
-  def new
-    @category = Category.new
-    @categories = Category.all.order(:name)
-  end
+    def index
+      @categories = Category.all
+    end
 
-  def create
-    @category = Category.new(category_params)
-    if @category.save
-      redirect_to admin_categories_path, success: 'Категория успешно создана'
-    else
+    def new
+      @category = Category.new
       @categories = Category.all.order(:name)
-      flash[:danger] = 'Категория не создана'
-      render :new
     end
-  end
 
-  def edit
-    @categories = Category.where("id != #{@category.id}").order(:name)
-  end
+    def create
+      @category = Category.new(category_params)
+      if @category.save
+        redirect_to admin_categories_path, success: 'Категория успешно создана'
+      else
+        @categories = Category.all.order(:name)
+        flash[:danger] = 'Категория не создана'
+        render :new
+      end
+    end
 
-  def update
-    if @category.update(category_params)
-      redirect_to admin_categories_path, success: 'Категория успешно обновлена'
-    else
+    def edit
       @categories = Category.where("id != #{@category.id}").order(:name)
-      flash[:danger] = 'Категория не обновлена'
-      render :edit
     end
-  end
 
-  def destroy
-    @category.destroy
-    redirect_to admin_categories_path, success: 'Категория успешно удалена'
-  end
+    def update
+      if @category.update(category_params)
+        redirect_to admin_categories_path, success: 'Категория успешно обновлена'
+      else
+        @categories = Category.where("id != #{@category.id}").order(:name)
+        flash[:danger] = 'Категория не обновлена'
+        render :edit
+      end
+    end
 
-  private
+    def destroy
+      @category.destroy
+      redirect_to admin_categories_path, success: 'Категория успешно удалена'
+    end
 
-  def set_category
-    @category = Category.find(params[:id])
-  end
+    private
 
-  def category_params
-    params.require(:category).permit(:name, :parent_id)
+    def set_category
+      @category = Category.find(params[:id])
+    end
+
+    def category_params
+      params.require(:category).permit(:name, :parent_id)
+    end
   end
 end
