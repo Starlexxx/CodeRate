@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   def show
     # define access parameters
     endpoint = '0fa75163.compilers.sphere-engine.com'
-    access_token = '6bf3291fc2e34e712d804efe8a198e11'
+    access_token = ''
 
     # send request
     uri = URI.parse("http://#{endpoint}/api/v3/compilers?access_token=#{access_token}")
