@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Admin
+class Admin
   class TasksController < Admin::AdminController
     before_action :set_task, only: %i[edit update destroy]
 

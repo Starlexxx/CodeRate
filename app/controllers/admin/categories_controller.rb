@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Admin
+class Admin
   class CategoriesController < Admin::AdminController
     before_action :set_category, only: %i[edit update destroy]
 
