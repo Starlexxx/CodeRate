@@ -6,12 +6,16 @@ Rails.application.routes.draw do
   root 'tasks#index'
 
   get 'compiler/execute'
+  get 'compiler/submit_code'
   post 'compiler/submit_code', to: 'compiler#submit_code'
+
+  post 'tasks/test_code', to: 'tasks#test_code'
+
   resources :tasks, only: %i[show index test_code]
   resources :categories, only: [:show]
 
   namespace :admin do
-    resources :tasks, shallow: true, except: %i[show index]
-    resources :categories, shallow: true, except: [:show]
+    resources :tasks, except: %i[show index]
+    resources :categories, except: [:show]
   end
 end
