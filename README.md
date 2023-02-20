@@ -1,24 +1,26 @@
-# README
+# CodeRate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Web-application for creating programming courses. You can create theoretical and practical tasks and run your code on 11 languages.
 
-Things you may want to cover:
+You need to install and run [RemoteCodeCompiler](https://github.com/zakariamaaraki/RemoteCodeCompiler)
 
-* Ruby version
+## Requirements:
 
-* System dependencies
+- **Ruby** 3.0.1
+- **Rails** 7.0.4
+- **PostgreSQL** 9.5+
+- **Docker**
 
-* Configuration
+## Running Locally
 
-* Database creation
+Make sure you have all the requirments installed.
 
-* Database initialization
+```sh
+git clone git@github.com:Starlexxx/CodeRate.git # or clone your own fork
+cd CodeRate
+bundle install
+rails db:create:migrate
+rails s
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Your app should now be running on [localhost:3000](http://localhost:3000/).
