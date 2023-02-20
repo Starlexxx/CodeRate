@@ -1,0 +1,20 @@
+<h5>Вывод: </h5>
+<br>
+<% result = @response.dig(:testCasesResult, :test0) %>
+
+<% if result[:error].empty? %>
+  <strong>Результат выполнения: </strong>
+  <code><%= result[:output] %></code>
+  <br>
+  <strong>Время выполнения: </strong>
+  <%= "#{result[:executionDuration]} мс." %>
+  <br>
+  <strong>Среднее время выполнения: </strong>
+  <%= "#{@response[:averageExecutionDuration]} мс." %>
+  <br>
+  <strong>Время компиляции: </strong>
+  <%= "#{@response[:compilationDuration]} мс." %>
+<% else %>
+  <strong>Ошибка: </strong>
+  <code><%= result[:error] %></code>
+<% end %>
