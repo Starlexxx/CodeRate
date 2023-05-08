@@ -31,7 +31,6 @@ gem 'dotenv-rails'
 gem 'formtastic', '~> 4.0'
 gem 'mini_magick'
 gem 'platform-api'
-gem 'pry'
 gem 'trix'
 gem 'will_paginate', '~> 3.1.0'
 
@@ -46,6 +45,7 @@ gem 'bootstrap'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry'
 end
 
 group :development do
@@ -66,7 +66,15 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'test-prof', '~> 1.0'
   gem 'webdrivers'
+
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 6.0.0'
+  gem 'rails-controller-testing'
+  gem 'vcr'
+  gem 'simplecov'
+  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
