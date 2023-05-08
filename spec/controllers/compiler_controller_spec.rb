@@ -19,7 +19,11 @@ RSpec.describe CompilerController, type: :controller do
       }
     end
 
-    before { post :submit_code, params: params }
+    before do
+      VCR.use_cassette('compiler_remote_code_compiler/compile/json', record: :once) do
+        post :submit_code, params: params
+      end
+    end
 
     it { expect(response).to have_http_status(:ok) }
     it { expect(response).to render_template(:submit_code) }

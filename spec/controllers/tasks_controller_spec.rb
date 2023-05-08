@@ -23,7 +23,9 @@ RSpec.describe TasksController, type: :controller do
     let(:params) { { language: 'RUBY', source_code: 'puts gets', inputs: task.tests, results: task.results } }
 
     it 'returns response' do
-      post :test_code, params: params
+      VCR.use_cassette('task_remote_code_compiler/compile/json', record: :once) do
+        post :test_code, params: params
+      end
       expect(response).to be_successful
       expect(assigns(:response)).to be_present
     end

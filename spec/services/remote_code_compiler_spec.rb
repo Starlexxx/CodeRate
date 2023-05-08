@@ -6,26 +6,34 @@ RSpec.describe RemoteCodeCompiler, type: :service do
 
   describe '#call' do
     context 'with valid params' do
-      subject { described_class.call(valid_params) }
+      before do
+        VCR.use_cassette('successful_remote_code_compiler/compile/json', record: :once) do
+          @response = described_class.call(valid_params)
+        end
+      end
 
       it 'returns success' do
-        expect(subject[:statusCode]).to eq(200)
+        expect(@response[:statusCode]).to eq(200)
       end
 
       it 'returns output' do
-        expect(subject.dig(:testCasesResult, :test0, :output)).to eq("Hello World!\n")
+        expect(@response.dig(:testCasesResult, :test0, :output)).to eq("Hello World!\n")
       end
     end
 
     context 'with invalid params' do
-      subject { described_class.call(invalid_params) }
+      before do
+        VCR.use_cassette('failed_remote_code_compiler/compile/json', record: :once) do
+          @response = described_class.call(invalid_params)
+        end
+      end
 
       it 'returns failure' do
-        expect(subject[:statusCode]).to eq(600)
+        expect(@response[:statusCode]).to eq(600)
       end
 
       it 'returns output' do
-        expect(subject.dig(:testCasesResult, :test0, :verdict)).to eq("Runtime Error")
+        expect(@response.dig(:testCasesResult, :test0, :verdict)).to eq("Runtime Error")
       end
     end
   end

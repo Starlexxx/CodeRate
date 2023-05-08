@@ -9,6 +9,7 @@ abort('The Rails environment is running in production mode!') if Rails.env.produ
 require 'rspec/rails'
 require 'test_prof/recipes/rspec/let_it_be'
 require 'test_prof/recipes/rspec/before_all'
+require 'vcr'
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -64,4 +65,17 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
   config.include FactoryBot::Syntax::Methods
   config.include Devise::Test::ControllerHelpers, type: :controller
+
+  VCR.configure do |config|
+    config.cassette_library_dir = "fixtures/vcr_cassettes"
+    config.allow_http_connections_when_no_cassette = false
+    config.default_cassette_options =
+      {
+        record: :new_episodes,
+        allow_playback_repeats: true,
+        match_requests_on: [:method, :uri]
+      }
+    config.configure_rspec_metadata!
+    config.hook_into :typhoeus
+  end
 end

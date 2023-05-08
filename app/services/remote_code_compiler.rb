@@ -10,8 +10,8 @@ class RemoteCodeCompiler
   API_COMPILE_URL = 'http://localhost:8080/api/compile/json'
 
   DEFAULT_HEADERS = {
-    'Content-Type': 'application/json',
-    'Accept-Encoding': 'application/json'
+    'Content-Type' => 'application/json',
+    'Accept-Encoding' => 'application/json'
   }.freeze
 
   EMPTY_TEST_CASE = {
