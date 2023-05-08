@@ -16,7 +16,7 @@ Check if all tests are passing before you commit your changes.
 
 Make sure you have all the requirements installed.
 ```sh
-rspec spec/
+rspec
 ```
 ## Running Locally
 
