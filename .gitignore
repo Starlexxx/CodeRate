@@ -73,5 +73,9 @@ yarn-debug.log*
 yarn-debug.log*
 .yarn-integrity
 
+# Ignore IDE files
+.idea
+.vscode
+
 # Ignore system files
 **/.DS_Store

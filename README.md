@@ -11,9 +11,16 @@ You need to install and run [RemoteCodeCompiler](https://github.com/zakariamaara
 - **PostgreSQL** 9.5+
 - **Docker**
 
+## Running Specs
+Check if all tests are passing before you commit your changes.
+
+Make sure you have all the requirements installed.
+```sh
+rspec
+```
 ## Running Locally
 
-Make sure you have all the requirments installed.
+Make sure you have all the requirements installed.
 
 ```sh
 git clone git@github.com:Starlexxx/CodeRate.git # or clone your own fork

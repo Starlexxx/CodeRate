@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/api/compile/json
+    body:
+      encoding: UTF-8
+      string: '{"language":"RUBY","sourcecode":"puts gets","testCases":{"test0":{"expectedOutput":"empty_test","input":"Hello
+        World!"}},"timeLimit":"1","memoryLimit":"64"}'
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 08 May 2023 17:56:55 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"verdict":"Wrong Answer","statusCode":200,"error":"","testCasesResult":{"test0":{"verdict":"Wrong
+        Answer","verdictStatusCode":200,"output":"Hello World!\n","error":"","expectedOutput":"empty_test","executionDuration":291}},"compilationDuration":0,"averageExecutionDuration":291.0,"timeLimit":1000,"memoryLimit":64,"language":"RUBY","dateTime":"2023-05-08T17:56:54.04008"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:8080/api/compile/json
+  recorded_at: Mon, 08 May 2023 17:56:55 GMT
+recorded_with: VCR 6.1.0

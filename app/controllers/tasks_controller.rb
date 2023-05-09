@@ -20,13 +20,6 @@ class TasksController < ApplicationController
   end
 
   def compiler_params
-    {
-      language: params[:language],
-      source_code: params[:source_code].first,
-      memory_limit: params[:memory_limit],
-      time_limit: params[:time_limit],
-      inputs: params[:inputs],
-      tests: params[:tests]
-    }
+    params.permit(:language, :source_code, :inputs, :tests).merge(source: :tasks_controller)
   end
 end

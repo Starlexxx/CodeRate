@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8080/api/compile/json
+    body:
+      encoding: UTF-8
+      string: '{"language":"RUBY","sourcecode":"put \"Hello World!\"","testCases":{"test0":{"expectedOutput":"empty_test","input":""}},"timeLimit":15,"memoryLimit":10000}'
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Mon, 08 May 2023 17:42:29 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"verdict":"Runtime Error","statusCode":600,"error":"main.rb:1:in `<main>'':
+        undefined method `put'' for main:Object (NoMethodError)\n\nput \"Hello World!\"\n^^^\nDid
+        you mean?  puts\n               putc\n","testCasesResult":{"test0":{"verdict":"Runtime
+        Error","verdictStatusCode":600,"output":"","error":"main.rb:1:in `<main>'':
+        undefined method `put'' for main:Object (NoMethodError)\n\nput \"Hello World!\"\n^^^\nDid
+        you mean?  puts\n               putc\n","expectedOutput":"empty_test","executionDuration":213}},"compilationDuration":0,"averageExecutionDuration":213.0,"timeLimit":15000,"memoryLimit":10000,"language":"RUBY","dateTime":"2023-05-08T17:42:29.980382"}'
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: http://localhost:8080/api/compile/json
+  recorded_at: Mon, 08 May 2023 17:42:30 GMT
+recorded_with: VCR 6.1.0
