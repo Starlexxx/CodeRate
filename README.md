@@ -14,7 +14,6 @@ You need to install and run [RemoteCodeCompiler](https://github.com/zakariamaara
 ## Running Specs
 Check if all tests are passing before you commit your changes.
 
-Make sure you have all the requirements installed.
 ```sh
 rspec
 ```
